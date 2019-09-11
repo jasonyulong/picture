@@ -1,0 +1,41 @@
+<include file="./Tpl/top.html" />
+<div class="topmagins" style="height:40px;"></div>
+<div id="table_content">
+    <div class="searchHeadbox">
+        <form action="{:U('System/power')}" method="post" class="pure-form">
+            <input type="text" name="username" placeholder="请输入姓名或者组分类"/><input class="pure-button pure-button-primary" type="submit" value="查找"/>
+        </form>
+    </div>
+    <div style="color:#911;font-size: 12px;margin:10px 0;">*注意:如果找不到要设置的用户。让该用户登录一下即可*</div>
+    <table  class="pure-table pure-table-bordered" width="90%">
+        <thead>
+        <tr>
+            <th>人员名</th>
+            <th>角色</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+            <php>
+                foreach($userArr as $ulist){
+                    $username=$ulist['username'];
+                    $id=$ulist['id'];
+                    $tname=$arrTname[$username];
+                </php>
+
+                <tr>
+                    <td>{$username}</td>
+                    <td>{$tname}</td>
+                    <td><a href="{:U('System/modauserpower')}&id={$id}">修改</a></td>
+                  </tr>
+            <php>
+                }
+            </php>
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/mytools.js"></script>
+
+</body>
+</html>

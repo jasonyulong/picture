@@ -1,0 +1,62 @@
+#bodyWindows{background:url("/Public/img/bg90.png");opacity:1;position:fixed;z-index:200;top:0;left:0;}
+#bodyWindows .showimgleftlink,
+#bodyWindows .showimgrightlink
+{width:100px;height:100px;float: left;cursor:pointer; }
+#bodyWindows .showimgrightlink{float:right;}
+
+#bodyWindows .showimgleftlink a,
+#bodyWindows .showimgrightlink a
+{display:block;width:30px;height: 45px;background:url("/Public/img/layer.png") -85px 0 no-repeat;
+    margin:25px 0 0 10px;outline:none;blr:expression(this.onFocus=this.blur());
+}
+#bodyWindows .showimgrightlink a{background:url("/Public/img/layer.png") -84px -44px no-repeat;margin-left:50px;}
+#bodyWindows .showimgrightlink:hover a{background:url("/Public/img/layer.png") -113px -44px no-repeat;}
+#bodyWindows .showimgleftlink:hover a{background:url("/Public/img/layer.png") -114px 0 no-repeat;}
+
+
+#bodyWindows .viewImg_box{margin:20px;background:rgb(0, 112, 216);padding:1px;}
+#bodyWindows .viewImg_start .printstartbox{position:relative;margin-top:20px;width:auto;}
+#bodyWindows .viewImg_box p{margin:10px;color:#fff;}
+
+#bodyWindows .showImgs{width:40px;height:40px;display:block;position:absolute;}
+#bodyWindows .bodyWindows_img{padding-top:1px;}
+#bodyWindows .minipicbox{/*background:#911;*/height:50px;margin:4px 3px 0 3px;text-align:center;}
+#bodyWindows .minipicbox .scroolpicright,#bodyWindows .minipicbox .scroolpicleft
+{width:30px;height:50px;cursor:pointer}
+
+#bodyWindows .minipiclongbox a img{width:50px;height:50px;}
+#bodyWindows .minipiclongbox a{display: inline-block;float:left;width:50px;height:50px;margin:0 2px;opacity:0.7}
+#bodyWindows .minipicshortbox{overflow:hidden;height:50px;/*background:#0ff;*/}
+#bodyWindows .minipiclongbox a.hoverthis{width:46px;height:46px;border:2px solid #0ff;opacity:1}
+#bodyWindows .minipiclongbox a.hoverthis img{width:46px;height:46px;}
+#bodyWindows .minipicbox .scroolpicright a,#bodyWindows .minipicbox .scroolpicleft a
+{display:inline-block;width:20px;height:31px;margin-top:10px;background:url("/Public/img/layer.png") -175px -1px no-repeat;}
+#bodyWindows .minipicbox .scroolpicleft a{background:url("/Public/img/layer.png") -175px -33px no-repeat;}
+#bodyWindows .minipicshortbox,#bodyWindows .scroolpicright,#bodyWindows .scroolpicleft{
+    float: left;
+}
+
+#bodyWindows .number_index{color:#fff;height:19px;text-align:center;font-family:"微软雅黑"}
+#bodyWindows .closebox{border:2px solid #f5f5f5;font-weight:bold;font-size:14px;text-align:center;height:32px;width:32px;line-height:32px;
+    color:#fff;background:#999;position:absolute;cursor:pointer;border-radius:18px;
+    margin-top:-8px;
+}
+#bodyWindows .closebox:hover{background:#0070D8;}
+#bodyWindows .errorbox{font-size:14px;font-weight:bold;margin-top:30px;text-align:center;color:#a11;}
+
+#ModboxContent img{margin:0 auto;display:block;}
+#ModboxContent{overflow-y:scroll;}
+.Modboxtitlebox .btn_close {background:url("../img/icon.gif") 0 3102px  !important;cursor: pointer;display: block;float: right;height: 15px;margin-top: 6px;width: 15px;border:1px solid #fafafa}
+.Modboxtitlebox {background:#0e580c;color: #fff;font-size: 13px;height: 30px;line-height: 30px;padding: 0 8px;}
+#showMycheckImgbox{position:fixed;z-index:9999;padding:10px;top:50%;left:50%;/*background:url("../images/maskbgs.png");*/}
+#showMycheckImgbox b{position:absolute;cursor: pointer;background:#BABABA;text-align:center;margin:-10px;}
+#showMycheckImgbox b:hover{color: #922;}
+#Tan_show_hide_tips{background:#E9E9E9;top:40%;left:50%;text-align:center;border-radius:3px;border:3px solid #aaa;position:fixed;z-index:1999;font-size:13px;font-family:'微软雅黑';padding:6px 10px;}
+#Tan_JS_loading_Mask{height:150px;background:#fff;text-align:center;border-radius:5px;border:3px solid #aaa;margin-top:-75px;width:200px;margin-left:-100px;top:50%;left:50%;position: absolute;z-index:999;}
+.battch_picbox{float:left;margin:3px;opacity:0.6;background:#000;cursor: pointer}
+.battch_picbox img.battch_pic{width:60px;height: 60px;border:1px solid #888;}
+.battch_picbox.hovers{opacity:1;}
+.battch_picbox.hovers img.battch_pic{width:54px;height: 54px;border:4px solid #267EDF;}
+
+
+

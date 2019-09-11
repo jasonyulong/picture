@@ -1,0 +1,73 @@
+<include file="./Tpl/top.html" />
+<div class="topmagins"></div>
+<div id="form_submit_table" style="border: 1px solid #0070D8;padding:12px;">
+<form class="pure-form" action="{:U('System/imgconfig')}" method="post">
+    <div>
+        1. 在这些图片类型中
+        <div class="img_type_select">
+            <ul>
+        <?php
+            foreach($Alltypes as $vvv){
+                $id=$vvv['id'];
+                $typename=$vvv['typename'];
+                if(in_array($id ,$imgtypes)){
+                    $sed='checked="checked"';
+                }else{
+                    $sed='';
+                }
+                echo '<li><input class="checkedtype" '.$sed.' value="'.$id.'" type="checkbox" name="checkedtype[]"/>'.$typename.'</li>';
+            }
+        ?>
+            </ul>
+        </div>
+        当评论人数大于
+        <input type="text" name="pingluncount" value="{$data[0]['rev_count']}" id="pingluncount"/> 并且平均得分低于等于
+        <input type="text" name="danger_score" value="{$data[0]['score']}" id="danger_score"/> 时,需要重拍!
+    </div>
+<hr style="border:1px solid #999;margin:10px 0;">
+    <input type="submit" name="submit" value="submit" class="pure-button pure-button-primary" onclick="return subchecke()">
+</form>
+    </div>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/mytools.js"></script>
+<script>
+    funsTool=selectCheckbox;
+    function subchecke(){
+         var ctype='';
+        $(".checkedtype").each(function(){
+             var val=$(this).val();
+             if($(this).prop("checked")){
+                 ctype+=val;
+             }
+        });
+
+        if(ctype==''){
+            funsTool.showHTips('图片类型必须选择','#911',1200);
+            return false;
+        }
+
+        var pingluncount= $.trim($("#pingluncount").val());
+
+
+        if(pingluncount==''||isNaN(pingluncount)||parseInt(pingluncount)<=0){
+            funsTool.showHTips('评论人数必须填写为正整数','#911',1400);
+            return false;
+        }
+
+        var danger_score= $.trim($("#danger_score").val());
+
+
+        if(danger_score==''||isNaN(danger_score)||parseFloat(danger_score)<=0){
+            funsTool.showHTips('平均得分必须是小数或者整数','#911',1400);
+            return false;
+        }
+
+        return true;
+    }
+
+    $(function(){
+        <?php echo $result;?>
+    });
+</script>
+</body>
+</html>

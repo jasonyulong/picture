@@ -1,0 +1,80 @@
+[ 2018-04-25T18:31:35+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+SQL: select path,name,id from images where id='319361' limit 1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `img_log` [ RunTime:0.000000s ]
+SQL: insert into img_log(log,`user`,`addtime`,`type`)values('史玉龙-查看了【c1f2f90dcb5f55bb29a58398bbb1ba46.jpg,id:319361】大图','史玉龙','1524652295','1'); [ RunTime:0.010001s ]
+
+[ 2018-04-25T18:31:42+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select path,name,id from images where id='319360' limit 1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `img_log` [ RunTime:0.000000s ]
+SQL: insert into img_log(log,`user`,`addtime`,`type`)values('史玉龙-查看了【9acb212c382be728acdf5a81c83c59d6.jpg,id:319360】大图','史玉龙','1524652302','1'); [ RunTime:0.001000s ]
+
+[ 2018-04-25T18:31:43+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+SQL: select path,name,id from images where id='319359' limit 1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `img_log` [ RunTime:0.001000s ]
+SQL: insert into img_log(log,`user`,`addtime`,`type`)values('史玉龙-查看了【8fa327fcb8725fe28adf2e5e4292c726.jpg,id:319359】大图','史玉龙','1524652303','1'); [ RunTime:0.001000s ]
+
+[ 2018-04-25T18:31:44+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+SQL: select path,name,id from images where id='319358' limit 1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `img_log` [ RunTime:0.001000s ]
+SQL: insert into img_log(log,`user`,`addtime`,`type`)values('史玉龙-查看了【8f51bce5e804f31a7db71d3a3e17d270.jpg,id:319358】大图','史玉龙','1524652304','1'); [ RunTime:0.001000s ]
+
+[ 2018-04-25T18:31:46+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+SQL: select path,name,id from images where id='319357' limit 1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `img_log` [ RunTime:0.001000s ]
+SQL: insert into img_log(log,`user`,`addtime`,`type`)values('史玉龙-查看了【7d9929b10f838b256f01b388d18cfa26.jpeg,id:319357】大图','史玉龙','1524652306','1'); [ RunTime:0.011000s ]
+
+[ 2018-04-25T18:32:02+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select path,name,id from images where id='319323' limit 1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `img_log` [ RunTime:0.001000s ]
+SQL: insert into img_log(log,`user`,`addtime`,`type`)values('史玉龙-查看了【ffc762d29c1b31eecf70461343898597.jpg,id:319323】大图','史玉龙','1524652322','1'); [ RunTime:0.000000s ]
+
+[ 2018-04-25T18:32:36+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+SQL: select path,name,id from images where id='319361' limit 1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `img_log` [ RunTime:0.001000s ]
+SQL: insert into img_log(log,`user`,`addtime`,`type`)values('史玉龙-查看了【c1f2f90dcb5f55bb29a58398bbb1ba46.jpg,id:319361】大图','史玉龙','1524652356','1'); [ RunTime:0.000000s ]
+
+[ 2018-04-25T18:37:09+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select path,name,id from images where id='319436' limit 1 [ RunTime:0.000000s ]
+NOTIC: [2] getimagesize(E:\web\picture/uploads/2018042418/206b8d3f3984235bf935f4027f27edba9846.jpg): failed to open stream: No such file or directory E:\web\picture\Lib\Action\IndexAction.class.php 第 380 行.
+NOTIC: [2] file_get_contents(E:\web\picture/uploads/2018042418/206b8d3f3984235bf935f4027f27edba9846.jpg): failed to open stream: No such file or directory E:\web\picture\Lib\Action\IndexAction.class.php 第 381 行.
+

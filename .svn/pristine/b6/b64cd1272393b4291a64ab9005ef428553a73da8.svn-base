@@ -1,0 +1,102 @@
+<include file="./Tpl/top.html" />
+<div class="topmenus">
+    <a href="{:U('Table/index')}">常规上传报表</a>
+    <a href="{:U('Table/review')}">评论情况报表</a>
+    <a href="{:U('Table/sheying')}">摄影师报表</a>
+    <a  class="hovers"  href="{:U('Table/meigong')}">美工报表</a>
+    <a href="{:U('Table/tihuan')}">替换报表</a>
+    <a href="{:U('Table/getStatistic')}">上传图片款数报表</a>
+</div>
+<div id="form_submit_table">
+    <form action="{:U('Table/meigong')}" id="form_submit_tb" class="pure-form" method="post">
+        <input placeholder="开始时间" value="{$start}" autocomplete="off" type="text" name="start" id="start" onclick="WdatePicker()"/>
+        <input placeholder="结束时间" value="{$end}" autocomplete="off" type="text" name="end" id="end" onclick="WdatePicker()"/>
+        <select name="meigong" id="meigong">
+            <option value="">选择美工</option>
+            <php>
+                $meigong=$_POST['meigong'];
+                foreach($meigongs as $vvv){
+                    $vvv=$vvv['username'];
+                    if($vvv==$meigong){
+                        echo '<option selected="selected" value="'.$vvv.'">'.$vvv.'</option>';
+                    }else{
+                        echo '<option value="'.$vvv.'">'.$vvv.'</option>';
+                    }
+
+                }
+            </php>
+        </select>
+        <input type="hidden" value="1" name="sub"/>
+        <input type="button" class="pure-button pure-button-primary" onclick="checkSub()" id="submit_btn" value="查看"/>
+    </form>
+</div>
+
+<div id="table_content">
+
+    <table class="pure-table pure-table-bordered pic_data_table" width="90%">
+        <thead>
+        <tr>
+            <td><b>类型</b></td>
+            <td><b>总计</b></td>
+            <td>1星+</td>
+            <td>2星+</td>
+            <td>3星+</td>
+            <td>4星+</td>
+            <td>5星</td>
+        </tr>
+        </thead>
+        <tbody>
+         <?php
+          foreach($dataStar as $tp=>$datastar){
+             echo '<tr>';
+             echo '<td>'.$typeArr[$tp].'</td>';
+             echo '<td>'.$total[$tp].'</td>';
+             echo '<td>'.$datastar[1].'</td>';
+             echo '<td>'.$datastar[2].'</td>';
+             echo '<td>'.$datastar[3].'</td>';
+             echo '<td>'.$datastar[4].'</td>';
+             echo '<td>'.$datastar[5].'</td>';
+             echo '</tr>';
+          }
+         ?>
+        </tbody>
+    </table>
+
+    <h1 style="font-size:13px;">重传报表</h1>
+    <table class="pure-table pure-table-bordered pic_data_table" width="90%">
+        <thead>
+        <tr>
+            <td><b>类型</b></td>
+            <td><b>总计</b></td>
+            <td>应重传图片</td>
+            <td>已经重传</td>
+            <td>等待重传</td>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+          foreach($dataReLoad as $ty=>$datareload){
+            echo '<tr>';
+            echo '<td>'.$typeArr[$ty].'</td>';
+            echo '<td>'.$total[$ty].'</td>';
+            echo '<td>'.$datareload['needreload'].'</td>';
+            echo '<td>'.$datareload['reloaded'].'</td>';
+            echo '<td>'.($datareload['needreload']-$datareload['reloaded']).'</td>';
+            echo '</tr>';
+          }
+         ?>
+        </tbody>
+    </table>
+
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/mytools.js"></script>
+<script>
+    function checkSub(){
+        $("#form_submit_tb").submit();
+    }
+</script>
+</body>
+</html>

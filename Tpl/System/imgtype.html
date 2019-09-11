@@ -1,0 +1,125 @@
+<include file="./Tpl/top.html" />
+<div class="topmagins"></div>
+<div id="table_content">
+    <table class="pure-table pure-table-bordered">
+        <thead>
+        <tr>
+            <th>图片分类</th>
+            <th>允许上传者</th>
+            <th>操作修改</th>
+        </tr>
+        </thead>
+        <tbody>
+        <php>
+            foreach($types as $vvv){
+                 $id=$vvv['id'];
+                 $typename =$vvv['typename'];
+                 $uploder=$vvv['createuser'];
+                 echo '<tr>';
+                 echo '<td id="typename_'.$id.'">'.$typename.'</td>';
+                 echo '<td>'.$uploder.'</td>';
+                 echo '<td><a href="javascript:void(0);" onclick="ModUploder('.$id.')">修改</a></td>';
+                 echo '</tr>';
+            }
+        </php>
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/mytools.js"></script>
+<script>
+    var funsTool=selectCheckbox;
+
+    var ModUploder=function(id){
+        funsTool.showModbox("修改【"+$("#typename_"+id).html()+"】上传人员",400,500,function(){});
+        createhtmlsave(id);
+    };
+
+    var createhtmlsave=function(id){
+        $.post(
+            '{:U("System/getsearchhtml")}',
+                {'id':id},
+                function(data){
+                    funsTool.insertModBox(data,1);
+                }
+        );
+    };
+
+    var searchuser =function(that){
+        var val=$(that).prev("input").val();
+        var id=$(that).attr("class");
+        val= $.trim(val);
+        if(val==''){
+            funsTool.showTips(false,"请输入关键字");
+            return;}
+        $.post(
+                '{:U("System/searchUsername")}',
+                {'id':id,'wd':val},
+                function(data){
+                    $(".searchresultbox").html(data);
+                    //funsTool.insertModBox(data,1);
+                }
+        );
+    };
+
+    var addUsers=function(user,that){
+        var elm=$(that).parent();
+        var id=$(that).attr("class");
+        $.post(
+                '{:U("System/addImgTypeuser")}',
+                {'user':user,'id':id},
+                function(data){
+                    //funsTool.insertModBox(data,1);
+                    if(data=='-10'){
+                        funsTool.showTips(false,"参数传输错误!")
+                    }
+                    if(data=='-9'){
+                        funsTool.showTips(false,"找不到图片类型!!")
+                    }
+                    if(data=='-2'){
+                        funsTool.showTips(false,"保存失败!!")
+                    }
+                    if(data=='2'){
+                        elm.remove();
+                        funsTool.showTips(true,"保存成功")
+                    }
+
+                }
+        );
+    };
+
+    var deleteuser=function(username,that){
+        var elm=$(that).parent();
+        var id=$(that).attr("class");
+        $.post(
+                '{:U("System/delImgTypeuser")}',
+                {'user':username,'id':id},
+                function(data){
+                    //funsTool.insertModBox(data,1);
+                    if(data=='-10'){
+                        funsTool.showTips(false,"参数传输错误!")
+                    }
+                    if(data=='-9'){
+                        funsTool.showTips(false,"找不到图片类型!!")
+                    }
+                    if(data=='-2'){
+                        funsTool.showTips(false,"保存失败!!")
+                    }
+                    if(data=='2'){
+                        elm.remove();
+                        funsTool.showTips(true,"保存成功")
+                    }
+
+                }
+        );
+    };
+
+    var submitusers=function(){
+
+    };
+
+
+</script>
+
+</body>
+</html>

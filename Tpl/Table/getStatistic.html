@@ -1,0 +1,86 @@
+<include file="./Tpl/top.html" />
+<div class="topmenus">
+    <a href="{:U('Table/index')}">常规上传报表</a>
+    <a href="{:U('Table/review')}">评论情况报表</a>
+    <a href="{:U('Table/sheying')}">摄影师报表</a>
+    <a href="{:U('Table/meigong')}">美工报表</a>
+    <a href="{:U('Table/tihuan')}">替换报表</a>
+    <a class="hovers" href="{:U('Table/getStatistic')}">上传图片款数报表</a>
+</div>
+<div id="form_submit_table">
+    <form action="{:U('Table/getStatistic')}" id="form_submit_tb" class="pure-form" method="post">
+        <input placeholder="开始时间" value="{$start}" autocomplete="off" type="text" name="start" id="start" onclick="WdatePicker()"/>
+        <input placeholder="结束时间" value="{$end}" autocomplete="off" type="text" name="end" id="end" onclick="WdatePicker()"/>
+        <!--<select name="meigong" id="meigong">-->
+            <!--<option value="">选择美工</option>-->
+            <!--<php>foreach($meigongs as $v){</php>-->
+            <!--<option value="{$v}" <if condition="$v eq $meigong">selected="selected"</if>>{$v}</option>-->
+            <!--<php>}</php>-->
+        <!--</select>-->
+        <select name="type">
+            <option value="0">美工</option>
+            <option value="1" <if condition="$type eq 1">selected="selected"</if>>摄影</option>
+        </select>
+        <input type="hidden" value="1" name="sub"/>
+        <input type="button" class="pure-button pure-button-primary" onclick="checkSub()" id="submit_btn" value="查看"/>
+    </form>
+</div>
+
+<div id="table_content" style="margin: 0;padding: 0">
+    <table class="pure-table pure-table-bordered pic_data_table" style="width:97%;margin:0 auto;text-align:center">
+        <thead>
+            <tr>
+                <td width="6%">上传人员</td>
+                <td width="7%">款数(蓝色)</td>
+                <td>sku图片列表(注： 蓝色:主图附图总数>=10张 黑色:主图附图总数<10)</td>
+            </tr>
+        </thead>
+        <tbody>
+        <php>foreach($list as $adduser=>$v){</php>
+        <tr>
+            <td>{$adduser}</td>
+            <td>{$v.model_count}</td>
+            <td style="word-break: break-all;height:200px;">
+                <div style="height:100%;overflow-y: scroll">
+                <!--<a href="javascript:void(0);">查看详情</a>-->
+                <volist name="v.list" id="_v">
+                    <a onclick="readDetail('{$_v.sku}','{$start}','{$end}','{$type}','{$adduser}')" style="float:left;width:8%;height:40px;text-align:center;margin:1%;<?php echo $_v['sku_pic_qty']>=10?'color:#2878F8':'color:#393D49';  ?>" href="javascript:void(0);">{$_v.sku}<br/>(共{$_v.sku_pic_qty}张)</a>
+                </volist>
+                </div>
+            </td>
+        </tr>
+        <php>}</php>
+        </tbody>
+    </table>
+</div>
+<div style="width:100%;height:200px"></div>
+<link rel="stylesheet" href="__PUBLIC__/plugins/layer/skin/layer.css">
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/mytools.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugins/layer/layer.js"></script>
+<script>
+    function checkSub(){
+        $("#form_submit_tb").submit();
+    }
+
+    function readDetail(sku,start,end,type,adduser){
+        var url = '__URL__/readSkuPicDetail/sku/' + sku + '/start/' + start +'/end/' + end+'/type/' + type+'/adduser/' + adduser;
+        layer.open({
+            type: 2,
+            title: '图片详情:'+sku,
+            shift: '1',
+            closeBtn: 1,
+            scrollbar: false,
+            maxmin: true,
+            area: ['1200px', '600px'],
+            content: url
+        })
+    }
+
+    function read() {
+
+    }
+</script>
+</body>
+</html>

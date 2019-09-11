@@ -1,0 +1,114 @@
+body{margin:0;padding:0;background: #F0EFEE}
+.indexsearchbox{
+    /*margin: 20px;*/
+}
+.indexsearchbox input.pure-input-1-3{width:500px;}
+.logininfobox{font-size: 13px;padding-top:1px;position:fixed;background:#FFFFFF;width:100%;z-index:99;box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);height: 48px;}
+#userloginame{cursor:pointer;}
+.other_power,.indexsearchbox,.userlogininfo{float:left;line-height: 48px;font-size: 14px;margin:0 20px;}
+.userlogininfo{margin:0;}
+.other_power .o_text{line-height: 48px;padding:0 15px;}
+
+.other_power{color:#c90000;cursor:pointer;margin-left: 40px;}
+#top_menu{position:absolute;
+    background:none;
+    display: none;
+}
+#top_menu .top_menu_content{background:#FDFDFE;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);border-radius:1px;padding: 14px 24px; line-height:20px;}
+.other_power:hover #top_menu{display:block;}
+
+#top_menu .menu_arrow{background:url("/Public/img/menu_arrow.png");left: 30px;width:18px;height:10px;position: relative;}
+.topmagins{height:48px;}
+#top_menu ul{padding:0;margin:0;}
+#top_menu ul li{list-style: none;/*width:110px;*/}
+#top_menu ul li a{font-size: 15px;line-height: 25px;}
+.userlogininfo a,#top_menu ul li a,#table_content a{text-decoration:none;color:#000;}
+.userlogininfo a:hover,#top_menu ul li a:hover,#table_content a:hover{text-decoration:underline;color:#F65334;}
+#searchresult{
+    background:#F0EFEE;border-bottom: 1px solid rgba(214, 213, 212, 0.64);padding: 30px 20px 20px 20px;/*
+    -moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;-khtml-user-select: none;user-select: none;*/
+}
+#searchHelp{}
+#searchresult .picimageBox{box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);background:#B7B7B7;float:left;overflow:hidden;height:250px;width:180px;margin:10px;border: 1px solid #e5e3e4;}
+#searchresult .picimageBox.hovers{border: 1px solid #F65334;;background:#F65334;}
+#searchresult .image_text{font-size: 12px;padding-left:5px;height:75px;overflow:hidden;margin-top:-10px;font-family:"微软雅黑";}
+#searchresult .image_name{font-weight: bold;}
+
+#searchresult .image_ohter{font-size: 10px;overflow: hidden;}
+.image_text .image_name i{font-style:normal;font-weight:normal;font-size:11px;}
+input.imglist{display:none;}
+.image_text p.image_name{margin:22px 0 0 0;padding:3px 0;}
+.image_text p.image_ohter{margin:0;}
+.image_text p.image_my_note{display:none;}
+p.image_name input{vertical-align:middle;}
+/*p.image_name:hover{background:#0070D8;color:#fff;}*/
+#searchresult .image_text:hover{cursor:pointer;background:#aaa;color:#000;}
+#searchresult .picimageBox.hovers .image_text:hover{background:#F87364}
+.picimageBox .minipic{width:180px;height:180px;}
+.printstartbox{position:absolute;height:16px;padding:2px 5px;width:170px;margin-top:180px;
+    background:url("/Public/img/bg30.png");}
+
+.printstartbox div.printstartbox_son{width:85px;height:16px;overflow:hidden;background:url("/Public/img/star.png") -86px 0 no-repeat;}
+.printstartbox div.startbox{width:17px;height:15px;float:left;}
+.printstartbox div.startbox:hover{cursor:pointer;}
+
+
+
+div.score_number,div.printstartbox_son{float: left;}
+div.score_number{font-size:13px;font-family:"微软雅黑";font-style: oblique;line-height:16px;margin-left:49px;}
+
+.printstartbox div.startbox.hovers{background:url("/Public/img/star.png");}
+.selectStarbox{height:50px;}
+
+.bgchange{background:url("/Public/img/bg90.png");}
+.content {margin:20px auto; width: 1000px; border: 1px solid #ccc; padding: 20px;}
+.content .drag {width: 1000px; min-height: 300px;border: 2px dashed #666;}
+.spn-img img {max-width: 126px;}
+#submitimgid{margin: 10px auto;text-align: center;}
+b.delimg{background:#a00;display:block;cursor:pointer;width:20px;height:20px;position:absolute;
+    text-align:center;line-height:20px;z-index:100;color:#fff;}
+.boximg{display:inline-block;margin:5px;border:1px solid #000;}
+#upload_img_type,#upload_photoer,select.sortClass{display:inline-block;}
+select.sortClass{border: 1px solid #ccc;border-radius: 4px;}
+.noimgtype{color:#911;font-size:20px;}
+
+#table_content{margin-left: 30px;}
+#table_content a{}
+
+
+.userbox{padding:10px;border:1px solid #aaa;}
+.searchinputbox{margin:20px 0 10px 0;border-bottom: 1px solid #222;padding-bottom: 20px;}
+.userbox .oneuser{border: 1px solid #5CA9EE;padding:3px;width:110px;float:left;margin:10px 10px 0 0;background:#D9FFE0;}
+.userbox .oneuser b,.userbox .oneuser span{display:inline-block;cursor:pointer;font-weight:normal;font-size:9px;border:1px solid #911;width:12px;height:12px;line-height:12px;text-align: center;margin-left:7px;}
+.userbox .oneuser span{font-size:16px;border:1px solid #191;color:#191;}
+
+ul.powersul li,ul.powersul{margin: 0;padding:0;list-style: none;margin:10px 0;}
+
+.topmenus{text-indent:2em;height:35px;border-bottom:2px solid #0071DA;}
+.topmenus a{text-indent:0;font-size:13px;font-weight:bold;color:#000;display:inline-block;width:120px;text-align:center;line-height:35px;text-decoration:none;}
+.topmenus a:hover,.topmenus a.hovers{background:#0071DA;color:#fff;}
+#form_submit_table{margin:20px 20px 20px 32px;}
+
+table.pic_data_table tr:hover td{background:#A9E4E9;}
+
+.img_type_select ul,.img_type_select li{list-style:none;}
+.img_type_select ul{margin:10px 0 0 20px;padding:0;}
+
+span.bfenbi{font-size: 11px;color:#555}
+
+.reload_two_box{width: 396px;height:270px; background:#A9E4E9;margin:10px 20px 0 0;float:left;}
+.reload_two_box:hover{background:#f65334 }
+.reload_two_box .score_number{margin-left: 2px;}
+.reload_two_box .score_number a{text-decoration: none;font-style: normal;}
+.reload_two_box .reloadimageBox{margin-left:0!important;}
+
+.reload_two_box .image_ohter i{font-size:11px;font-style:normal;}
+span.reloadimageBox_noimg{font-size:40px;font-family:"微软雅黑";display:inline-block;width: 180px;text-align:center;margin-top:40px;}
+.reload_two_box .a-upload {background: #fafafa none repeat scroll 0 0; margin-left:45px;  border: 1px solid #ddd;  border-radius: 4px;  color: #888;  cursor: pointer;  display: inline-block;  height: 20px;  line-height: 20px;overflow: hidden;padding: 4px 10px;position: relative;}
+.reload_two_box .a-upload input{cursor: pointer;font-size: 100px;height:22px;width:70px;opacity: 0;  position: absolute;}
+
+.review_info_box{font-size:12px;background:#f2f2f2;padding:10px;overflow-y: scroll;}
+#bodyWindows .review_info_box .review_info_box_contect p{text-indent:2em;font-size:12px;background:#d2d2d2;padding:8px;margin:4px 0 0 0;color:#222!important;}
+#bodyWindows .review_info_box .rrview_hover{padding: 3px;margin-bottom:10px;}
+#bodyWindows .review_info_box .rrview_hover:hover{background:#DAC10F;}
+

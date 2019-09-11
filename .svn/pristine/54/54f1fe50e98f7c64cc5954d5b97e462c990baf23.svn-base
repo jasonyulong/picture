@@ -1,0 +1,16 @@
+html,body,h1,h2,h3,h4,h5{padding:0;margin:0}
+div.c_list {background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #444444;height: auto;margin: 1px 0 0 35px; max-height: 200px; overflow-x: hidden;overflow-y: scroll; padding: 5px 0; position: absolute;width: 200px;}
+div.c_list ul{  margin: 0;padding: 0;}
+div.c_list ul li {cursor: pointer;list-style: none outside none;margin: 0;text-indent: 5px;}
+div.c_list ul li:hover {background: none repeat scroll 0 0 #79A7D8;}
+tr.tr_copyright td,tr.tr_copyright:hover td{background:#fdd}
+#bodyMask{background:url("../images/maskbgs.png")!important;}
+#ModboxContent img{margin:0 auto;display:block;}
+#ModboxContent{overflow-y:scroll;}
+.Modboxtitlebox .btn_close {background:url("../images/icon.gif") 0 3102px  !important;cursor: pointer;display: block;float: right;height: 15px;margin-top: 6px;width: 15px;border:1px solid #fafafa}
+.Modboxtitlebox {background:#0e580c;color: #fff;font-size: 13px;height: 30px;line-height: 30px;padding: 0 8px;}
+#showMycheckImgbox{position:fixed;z-index:9999;padding:10px;top:50%;left:50%;background:url("../images/maskbgs.png");}
+#showMycheckImgbox b{position:absolute;cursor: pointer;background:#BABABA;text-align:center;margin:-10px;}
+#showMycheckImgbox b:hover{color: #922;}
+#Tan_show_hide_tips{background:#E9E9E9;top:50%;left:50%;text-align:center;border-radius:3px;border:3px solid #aaa;position:absolute;z-index:1999;font-size:13px;font-family:'微软雅黑';padding:6px 10px;}
+#Tan_JS_loading_Mask{height:150px;background:#fff;text-align:center;border-radius:5px;border:3px solid #aaa;margin-top:-75px;width:200px;margin-left:-100px;top:50%;left:50%;position: absolute;z-index:999;}

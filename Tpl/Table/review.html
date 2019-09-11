@@ -1,0 +1,108 @@
+<include file="./Tpl/top.html" />
+<div class="topmenus">
+    <a href="{:U('Table/index')}">常规上传报表</a>
+    <a  class="hovers" href="{:U('Table/review')}">评论情况报表</a>
+    <a href="{:U('Table/sheying')}">摄影师报表</a>
+    <a href="{:U('Table/meigong')}">美工报表</a>
+    <a href="{:U('Table/tihuan')}">替换报表</a>
+    <a href="{:U('Table/getStatistic')}">上传图片款数报表</a>
+</div>
+<div id="form_submit_table">
+    <form action="{:U('Table/review')}" id="form_submit_tb" class="pure-form" method="post">
+        <input placeholder="开始时间" value="{$start}" autocomplete="off" type="text" name="start" id="start" onclick="WdatePicker()"/>
+        <input placeholder="结束时间" value="{$end}" autocomplete="off" type="text" name="end" id="end" onclick="WdatePicker()"/>
+        <select name="pluser" id="pluser">
+            <option value="">选择评论人</option>
+            <php>
+                $pluser=$_POST['pluser'];
+                foreach($plusers as $vvv){
+                    if($vvv==$pluser){
+                        echo '<option selected="selected" value="'.$vvv.'">'.$vvv.'</option>';
+                    }else{
+                        echo '<option value="'.$vvv.'">'.$vvv.'</option>';
+                    }
+
+                }
+            </php>
+        </select>
+        <input type="hidden" value="1" name="sub"/>
+        <input type="button" class="pure-button pure-button-primary" onclick="checkSub()" id="submit_btn" value="查看"/>
+    </form>
+</div>
+
+<div id="table_content">
+<?php if(empty($pluser)){ ?>
+    <table class="pure-table pure-table-bordered pic_data_table" width="90%">
+        <thead>
+            <tr>
+            <td>评论人</td>
+            <td>角色</td>
+            <td>评论数量</td>
+            </tr>
+        </thead>
+        <?php
+        $total=0;
+        foreach($data as $userview){
+            $username=$userview['username'];
+            $jiaose=$userjiaose[$username];
+            $cc=$userview['cc'];
+            echo '<tr>';
+            echo '<td>'.$username.'</td><td>'.$jiaose.'</td><td>'.$cc.'</td>';
+            echo '<tr>';
+            $total+=$cc;
+        }
+
+        echo '<tr><td><b>总计</b><td> </td><td>'.$total.'</td></tr>'
+        ?>
+        <tbody>
+        </tbody>
+    </table>
+<?php }else{ ?>
+
+    <table class="pure-table pure-table-bordered pic_data_table" width="90%">
+        <thead>
+        <tr>
+            <td>日期</td>
+            <td>评论人</td>
+            <td>角色</td>
+            <td>评论数量</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <?php
+        $total=0;
+        foreach($data as $userview){
+            $username=$pluser;
+            $jiaose=$userjiaose[$username];
+            $cc=$userview['cc'];
+            $date=$userview['date'];
+            if($cc==0){
+                $color='#911';
+            }else{
+                $color='';
+            }
+            echo '<tr>';
+            echo '<td>'.$date.'</td><td>'.$username.'</td><td>'.$jiaose.'</td><td style="color:'.$color.';">'.$cc.'</td>';
+            echo '<tr>';
+                $total+=$cc;
+            }
+
+            echo '<tr><td><b>总计</b><td> </td><td></td><td>'.$total.'</td></tr>'
+        ?>
+        </tbody>
+    </table>
+
+<?php } ?>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/mytools.js"></script>
+<script>
+    function checkSub(){
+        $("#form_submit_tb").submit();
+    }
+</script>
+</body>
+</html>

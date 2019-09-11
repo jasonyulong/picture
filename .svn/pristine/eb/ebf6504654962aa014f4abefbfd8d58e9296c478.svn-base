@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="__PUBLIC__/css/pure-min.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/css.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/tools.css">
+    <title>Picture</title>
+</head>
+<body>
+    <?php
+     $cpower=session('power');
+     ?>
+    <div class="logininfobox">
+        <div class="other_power">
+            <div class="o_text">其他功能</div>
+            <div id="top_menu">
+                <div class="menu_arrow"></div>
+                <div class="top_menu_content">
+                    <div class="menu_ul">
+                        <ul>
+                            <li><a href="{:U('Index/index')}">首页</a></li>
+
+                            <php> if(in_array('imgpower',$cpower)){ </php>
+                            <li><a href="{:U('System/power')}">权限设置</a></li>
+                            <php>}</php>
+
+                            <php> if(in_array('imgtypeset',$cpower)){ </php>
+                            <li><a href="{:U('System/imgtype')}">图片类型设置</a></li>
+                            <php>}</php>
+
+                             <li><a href="{:U('Index/upload')}">上传图片</a></li>
+
+                            <php> if(in_array('imgtable',$cpower)){ </php>
+                            <li><a href="{:U('Table/index')}">查看报表</a></li>
+                            <php>}</php>
+
+                            <li><a href="{:U('Index/viewNeedReload')}">需要重拍</a></li>
+
+                            <li><a href="{:U('Index/viewNeedReplace')}">需要替换</a></li>
+
+                            <php> if(in_array('imgconfig',$cpower)){ </php>
+                            <li><a href="{:U('System/imgconfig')}">系统设置</a></li>
+                            <php>}</php>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="indexsearchbox">
+            <form class="pure-form" id="main_search_form" action="{:U('Index/index')}">
+                <input type="text" value="<php>echo $key;</php>" name="pkeyword" class="pure-input-1-3" placeholder="请输入sku,多个用逗号或者空格隔开">
+                <php>echo $indexhtml;</php>
+                <input type="hidden" name="pageNow" id="pageNows" value=""/>
+                <button type="submit" class="pure-button pure-button-primary">&nbsp;&nbsp;搜索&nbsp;&nbsp;</button>
+            </form>
+            <form id="downloadform" method="post" action="{:U('Index/download')}" target="_blank">
+                <input type="hidden" id="idstr" name="idstr" value=""/>
+            </form>
+        </div>
+
+
+        <div class="userlogininfo">
+            <span id="userloginame"><php>echo session('loginName');</php></span> <a href="{:U('Login/logout')}">退出!</a>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="topmagins"></div>

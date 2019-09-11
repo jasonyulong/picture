@@ -1,0 +1,91 @@
+<include file="./Tpl/top.html" />
+<div class="topmenus">
+    <a class="hovers" href="{:U('Table/index')}">常规上传报表</a>
+    <a href="{:U('Table/review')}">评论情况报表</a>
+    <a href="{:U('Table/sheying')}">摄影师报表</a>
+    <a href="{:U('Table/meigong')}">美工报表</a>
+    <a href="{:U('Table/tihuan')}">替换报表</a>
+    <a href="{:U('Table/getStatistic')}">上传图片款数报表</a>
+</div>
+<div id="form_submit_table">
+    <form action="{:U('Table/index')}" id="form_submit_tb" class="pure-form" method="post">
+        <input placeholder="开始时间" value="{$start}" autocomplete="off" type="text" name="start" id="start" onclick="WdatePicker()"/>
+        <input placeholder="结束时间" value="{$end}" autocomplete="off" type="text" name="end" id="end" onclick="WdatePicker()"/>
+        <select name="uploader" id="uploader">
+            <option value="">选择上传人</option>
+            <php>
+                $upuser=$_POST['uploader'];
+                foreach($uploaduser as $vvv){
+                    if($vvv==$upuser){
+                        echo '<option selected="selected" value="'.$vvv.'">'.$vvv.'</option>';
+                    }else{
+                        echo '<option value="'.$vvv.'">'.$vvv.'</option>';
+                    }
+                }
+            </php>
+        </select>
+        <input type="hidden" value="1" name="sub"/>
+        <input type="button" class="pure-button pure-button-primary" onclick="checkSub()" id="submit_btn" value="查看"/>
+    </form>
+</div>
+
+<div id="table_content">
+    <table class="pure-table pure-table-bordered pic_data_table" width="90%">
+        <thead>
+            <tr>
+            <td>上传人员\图片类型</td>
+             <php>
+                 foreach($imgTypeArr as $typeindex=>$typename){
+                    echo '<td>'.$typename.'</td>';
+                 }
+             </php>
+            <td>总计</td>
+            </tr>
+        </thead>
+        <tbody>
+            <php>
+                $Maincount=0;
+                $TypeCount=array();
+                foreach($data as $uname=>$typeCount){
+                    echo '<tr>';
+                    $cc=0;
+                   echo '<td>'.$uname.'</td>';
+                    foreach($imgTypeArr as $typeindex=>$typename){
+
+                        $counts=isset($typeCount[$typeindex])?$typeCount[$typeindex]:0;
+                        if(isset($TypeCount[$typeindex])){
+                            $TypeCount[$typeindex]+=$counts;
+                        }else{
+                            $TypeCount[$typeindex]=$counts;
+                        }
+                        $cc+=$counts;
+                        echo '<td>'.$counts.'</td>';
+                    }
+                    $Maincount+=$cc;
+                    echo '<td>'.$cc.'</td>';
+                    echo '</tr>';
+                }
+            </php>
+            <tr>
+                <td></td>
+                <php>
+                    foreach($imgTypeArr as $typeindex=>$typename){
+                          echo '<td>'.$TypeCount[$typeindex].'</td>';
+                    }
+                    echo '<td>'.$Maincount.'</td>';
+                </php>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/mytools.js"></script>
+<script>
+    function checkSub(){
+        $("#form_submit_tb").submit();
+    }
+</script>
+</body>
+</html>

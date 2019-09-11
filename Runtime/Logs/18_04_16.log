@@ -1,0 +1,104 @@
+[ 2018-04-16T21:38:10+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.031001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select path,name,id from images where id='318795' limit 1 [ RunTime:0.001000s ]
+NOTIC: [2] getimagesize(E:\web\picture/uploads/2017101308/8ddce4fb85128c8a9aaaf1697c4511dd2394.jpg): failed to open stream: No such file or directory E:\web\picture\Lib\Action\IndexAction.class.php 第 380 行.
+NOTIC: [2] file_get_contents(E:\web\picture/uploads/2017101308/8ddce4fb85128c8a9aaaf1697c4511dd2394.jpg): failed to open stream: No such file or directory E:\web\picture\Lib\Action\IndexAction.class.php 第 381 行.
+
+[ 2018-04-16T21:48:04+08:00 ] 127.0.0.1 /index.php?s=/Pangu/uploadimgs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select sku,path,name from images where id IN(318796) [ RunTime:0.000000s ]
+
+[ 2018-04-16T21:51:10+08:00 ] 127.0.0.1 /index.php?s=/Pangu/uploadimgs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+
+[ 2018-04-16T21:52:10+08:00 ] 127.0.0.1 /index.php?s=/Pangu/uploadimgs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select sku,path,name from images where id IN(318796,318795,318794) [ RunTime:0.001001s ]
+
+[ 2018-04-16T21:55:44+08:00 ] 127.0.0.1 /index.php?s=/Pangu/uploadimgs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select sku,path,name from images where id IN(318796,318795,318794,318793) [ RunTime:0.001000s ]
+
+[ 2018-04-16T22:00:21+08:00 ] 127.0.0.1 /index.php?s=/Index/markImages
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+SQL: select * from images where id='318796' limit 1 [ RunTime:0.000000s ]
+SQL: UPDATE `images` SET `is_replace`=2 WHERE ( `id` = 318796 ) [ RunTime:0.001000s ]
+SQL: select * from images where id='318795' limit 1 [ RunTime:0.000000s ]
+SQL: UPDATE `images` SET `is_replace`=2 WHERE ( `id` = 318795 ) [ RunTime:0.000000s ]
+SQL: select * from images where id='318794' limit 1 [ RunTime:0.000000s ]
+SQL: UPDATE `images` SET `is_replace`=2 WHERE ( `id` = 318794 ) [ RunTime:0.001000s ]
+
+[ 2018-04-16T22:00:43+08:00 ] 127.0.0.1 /index.php?s=/Index/getbase64Img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+SQL: select path,name,id from images where id='318793' limit 1 [ RunTime:0.001000s ]
+NOTIC: [2] getimagesize(E:\web\picture/uploads/2017101308/8ddce4fb85128c8a9aaaf1697c4511dd5875.jpg): failed to open stream: No such file or directory E:\web\picture\Lib\Action\IndexAction.class.php 第 380 行.
+NOTIC: [2] file_get_contents(E:\web\picture/uploads/2017101308/8ddce4fb85128c8a9aaaf1697c4511dd5875.jpg): failed to open stream: No such file or directory E:\web\picture\Lib\Action\IndexAction.class.php 第 381 行.
+
+[ 2018-04-16T22:16:35+08:00 ] 127.0.0.1 /index.php?s=/Pangu/uploadimgs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+SQL: select sku,path,name from images where id IN(318828,318827,318826,318825) [ RunTime:0.000000s ]
+
+[ 2018-04-16T22:37:37+08:00 ] 127.0.0.1 /index.php?s=/Pangu/uploadimgs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select sku,path,name from images where id IN(318844,318843,318842) [ RunTime:0.000000s ]
+
+[ 2018-04-16T22:39:55+08:00 ] 127.0.0.1 /index.php?s=/Pangu/uploadimgs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select sku,path,name from images where id IN(318844,318843,318842) [ RunTime:0.001000s ]
+
+[ 2018-04-16T22:42:13+08:00 ] 127.0.0.1 /index.php?s=/Pangu/uploadimgs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.000000s ]
+SQL: select sku,path,name from images where id IN(318844,318843,318842,318841) [ RunTime:0.000000s ]
+
+[ 2018-04-16T22:45:43+08:00 ] 127.0.0.1 /index.php?s=/Pangu/uploadimgs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\web\picture\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `images` [ RunTime:0.001000s ]
+SQL: select sku,path,name from images where id IN(318844,318843,318842) [ RunTime:0.000000s ]
+
